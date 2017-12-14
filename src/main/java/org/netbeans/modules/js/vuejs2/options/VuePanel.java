@@ -2,7 +2,6 @@ package org.netbeans.modules.js.vuejs2.options;
 
 import java.io.File;
 import java.util.List;
-import org.netbeans.modules.js.vuejs2.wizard.VueConfigurationVisualPanel;
 import org.openide.awt.StatusDisplayer;
 import org.openide.filesystems.FileChooserBuilder;
 import org.openide.util.NbBundle;
@@ -95,12 +94,12 @@ final class VuePanel extends javax.swing.JPanel {
     }//GEN-LAST:event_vuePathBrowseButtonActionPerformed
 
     void load() {
-        String vue = NbPreferences.forModule(VueConfigurationVisualPanel.class).get("vueExecutableLocation", "");
+        String vue = NbPreferences.forModule(VuePanel.class).get("vueExecutableLocation", "");
         vuePathTextField.setText(vue);
     }
 
     void store() {
-        NbPreferences.forModule(VueConfigurationVisualPanel.class).put("vueExecutableLocation", vuePathTextField.getText());
+        NbPreferences.forModule(VuePanel.class).put("vueExecutableLocation", vuePathTextField.getText());
     }
 
     boolean valid() {
